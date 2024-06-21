@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "793435867391",
+    "project_id": "result-87101",
+    "storage_bucket": "result-87101.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793435867391:android:ebad9c397e7f32bd2624ca",
+        "android_client_info": {
+          "package_name": "com.example.accelify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl93TbPM-u9IfBj-46LOFN3RTWaFhm4ks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
