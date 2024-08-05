@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth auth;
 
+// has to add a method of email verification
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
                     .addOnCompleteListener(this, task -> {
                         if (task.isSuccessful()) {
                             // If registration is successful, go to MainActivity
-                            startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+                            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                         } else {
                             // If registration fails, show a toast message
                             Toast.makeText(RegisterActivity.this, "Registration failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

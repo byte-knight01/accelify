@@ -7,6 +7,14 @@
         <entry key="Firebase Crashlytics">
           <value>
             <InsightsFilterSettings>
+              <option name="connection">
+                <ConnectionSetting>
+                  <option name="appId" value="com.example.accelify" />
+                  <option name="mobileSdkAppId" value="1:793435867391:android:ebad9c397e7f32bd2624ca" />
+                  <option name="projectId" value="result-87101" />
+                  <option name="projectNumber" value="793435867391" />
+                </ConnectionSetting>
+              </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
               <option name="timeIntervalDays" value="THIRTY_DAYS" />
               <option name="visibilityType" value="ALL" />

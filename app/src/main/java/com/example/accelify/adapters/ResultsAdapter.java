@@ -70,7 +70,8 @@ import com.example.accelify.models.Result;
 
 import java.util.List;
 
-public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.ResultsViewHolder> {
+public class
+ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.ResultsViewHolder> {
     private List<Result> resultsList;
 
     public ResultsAdapter(List<Result> resultsList) {
