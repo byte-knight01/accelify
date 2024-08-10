@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
+    implementation(libs.firebase.appcheck.debug)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -59,6 +60,24 @@ dependencies {
 
 
     implementation("androidx.cardview:cardview:1.0.0")
+
+    implementation ("com.google.firebase:firebase-storage:20.0.0")
+
+    implementation("com.google.firebase:firebase-appcheck")
+
+    implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
+
+
+
+
+        // Add Firebase App Check Play Integrity
+        implementation ("com.google.firebase:firebase-appcheck-playintegrity:16.0.0")
+
+        // Other Firebase dependencies...
+//        implementation ("com.google.firebase:firebase-storage:20.2.1")
+//        implementation ("com.google.firebase:firebase-auth:21.1.0")
+        implementation ("com.google.firebase:firebase-firestore:24.4.3")
+
 
 
 }

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="black">#000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="My_primary">#D6DC7C</color>
     <color name="My_secondary">#B5E280</color>
+    <color name="button">#051056</color>
+    <color name="primary">#180161</color>
+    <color name="secondary">#4F1787</color>
+    <color name="tertiary">#EB3678</color>
+    <color name="quad">#FB773C</color>
+
 </resources>

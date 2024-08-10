@@ -126,22 +126,29 @@ public class DashboardActivity extends AppCompatActivity {
 
         // Creating a list of dashboard items
         dashboardItemList = new ArrayList<>();
-        dashboardItemList.add(new DashboardItem("Results", R.drawable.ic_results));
+
+        dashboardItemList.add(new DashboardItem("Results", R.drawable.img_2));
+        dashboardItemList.add(new DashboardItem("DPP", R.drawable.img_1));
         dashboardItemList.add(new DashboardItem("Coming Soon 1", R.drawable.ic_results));
         dashboardItemList.add(new DashboardItem("Coming Soon 2", R.drawable.ic_results));
-        dashboardItemList.add(new DashboardItem("Coming Soon 3", R.drawable.ic_results));
+//        dashboardItemList.add(new DashboardItem("Coming Soon 3", R.drawable.ic_results));
 
         // Setting up the adapter
         adapter = new DashboardAdapter(this, dashboardItemList);
         gridView.setAdapter(adapter);
 
-        // Setting up click listener for grid items
         gridView.setOnItemClickListener((parent, view, position, id) -> {
             if (position == 0) {
                 // Navigate to MainActivity when "Results" is clicked
                 Intent intent = new Intent(DashboardActivity.this, MainActivity.class);
                 startActivity(intent);
             }
+            else if (position == 1) {
+                // Navigate to ViewPdfActivity when "View PDFs" is clicked
+                Intent intent = new Intent(DashboardActivity.this, ViewPdfActivity.class);
+                startActivity(intent);
+            }
         });
+
     }
 }

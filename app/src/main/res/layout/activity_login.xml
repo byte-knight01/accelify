@@ -10,8 +10,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/My_primary"
-        android:alpha="0.5"/>
+        android:background="@color/primary"
+        android:alpha="0.7"/>
 
 
 
@@ -29,14 +29,14 @@
             android:layout_gravity="center"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="St.Marys School"
-            android:textStyle="bold"
             android:fontFamily="sans-serif-medium"
-            android:textSize="32dp"
             android:gravity="center"
-            android:textColor="@color/white"/>
+            android:text="St.Marys School"
+            android:textColor="@color/white"
+            android:textSize="32dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
     
@@ -75,10 +75,11 @@
 
             <EditText
                 android:id="@+id/emailEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Email"
+                android:layout_width="348dp"
+                android:layout_height="67dp"
                 android:drawableEnd="@drawable/done"
+                android:alpha="0.7"
+                android:hint="Email"
 
                 />
 
@@ -88,12 +89,12 @@
 
             <EditText
                 android:id="@+id/passwordEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Password"
-                android:inputType="textPassword"
+                android:layout_width="367dp"
+                android:layout_height="68dp"
                 android:drawableEnd="@drawable/password"
-                />
+                android:hint="Password"
+                android:alpha="0.7"
+                android:inputType="textPassword" />
 
 
             <RelativeLayout
@@ -125,12 +126,20 @@
                 android:id="@+id/loginButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondary"
+                android:textColor="@color/white"
                 android:text="Login" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"/>
 
             <Button
                 android:id="@+id/registerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondary"
+                android:textColor="@color/white"
                 android:text="Register" />
 
 
