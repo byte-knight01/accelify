@@ -1,6 +1,8 @@
 package com.example.accelify;
 
+import android.app.LauncherActivity;
 import android.content.Intent;
+import android.content.pm.LauncherActivityInfo;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,10 +15,11 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.accelify.teachers.Login_teacher;
 import com.example.accelify.teachers.teacherregister;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class launcheractivityActivity extends AppCompatActivity {
 
-
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,8 @@ public class launcheractivityActivity extends AppCompatActivity {
         Button teacher = findViewById(R.id.button);
         Button student = findViewById(R.id.button2);
 
+        // Initialize Firebase Auth
+        auth = FirebaseAuth.getInstance();
 
         teacher.setOnClickListener(v ->
                 startActivity(new Intent(launcheractivityActivity.this, Login_teacher.class))

@@ -103,10 +103,13 @@ package com.example.accelify;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.GridView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.accelify.adapters.DashboardAdapter;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -116,6 +119,8 @@ public class DashboardActivity extends AppCompatActivity {
     private GridView gridView;
     private DashboardAdapter adapter; 
     private List<DashboardItem> dashboardItemList;
+    private Button btnsignout;
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,7 +128,10 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         gridView = findViewById(R.id.grid_view);
+        btnsignout = findViewById(R.id.btn_sign_out);
 
+
+        auth = FirebaseAuth.getInstance();
         // Creating a list of dashboard items
         dashboardItemList = new ArrayList<>();
 
@@ -150,5 +158,31 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+
+
+        btnsignout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Sign out the user
+                auth.signOut();
+                // Redirect to login screen after sign-out
+                Intent intent = new Intent(DashboardActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();  // Close the dashboard activity
+            }
+        });
+
+
+
+
+
+
+
     }
 }
+
+//@Override
+//public void onBackPressed() {
+//    // Instead of finishing the activity, minimize the app
+//    moveTaskToBack(true);
+//}
